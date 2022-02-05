@@ -4,6 +4,30 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const useState = React.useState;
+
+const $app = document.querySelector('#app');
+
+const Avatar = props => {
+  const [enabled, setEnabled] = useState(true);
+  const imgClassName = enabled ? '' : 'disabled';
+  const pictureClassName = props.size === 'small' ? 'is-small' : '';
+  const src = `https://randomuser.me/api/portraits/women/${props.id}.jpg`;
+  return( 
+  <picture className={pictureClassName}>
+    <img alt="Icono de usuario" onClick = {() => setEnabled(!enabled)} className={imgClassName}  src={src}/>
+    <em>{props.name}</em>
+  </picture>
+  );
+};
+
+ReactDOM.render(
+  <div>
+    <Avatar id={11} name="Elisabeth"/>
+    <Avatar id={12} name="Putilla"/>
+  </div>
+  , $app);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
