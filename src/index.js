@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const useState = React.useState;
+/*const useState = React.useState;
 
 const $app = document.querySelector('#app');
 
@@ -32,11 +32,9 @@ ReactDOM.render(
     <Avatar/>
   </div>
   , $app);
-
+*/
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root')
 );
 
