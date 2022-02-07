@@ -1,29 +1,29 @@
 import React, { useEffect, useState} from 'react'; 
 import './App.css';
+import getGifs from './services/getGifs';
+import Gif from './components/Gif';
 
-const apiURL = 'https://api.giphy.com/v1/gifs/search?api_key=GgZFxJX9fFGwSxfJzSop7I3Tx9bea6bj&q=nano&limit=5&offset=0&rating=g&lang=es';
 
 function App() {
   const [gifs, setGifs] =  useState([]);
 
   useEffect(() => {
-    console.log("Efecto cada vez que se renderiza");
-    fetch(apiURL)
-      .then(res => res.json())
-      .then(response => {
-        const {data} = response; 
-      })
-  });
+    getGifs('morty', 4).then(gifs => setGifs(gifs));
+  }, []);
 
   return (
     <div className="App">
       <section className='App-content'>
+      <ol>
         {
-          gifs.map(singleGif => <img alt='Gif buscado de la API' src={singleGif}/>)
+          gifs.map(singleGif => <Gif title={singleGif.title} url={singleGif.url} 
+            id={singleGif.id}/>
+          )
         }
+        </ol>
       </section>
     </div>
-  );
+    );
 }
 
 export default App;
