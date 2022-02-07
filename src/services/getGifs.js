@@ -1,7 +1,7 @@
 const apiKey = 'GgZFxJX9fFGwSxfJzSop7I3Tx9bea6bj';
-;
+
 export default function getGifs(keyword = 'cars', limit = 3) {
-    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=${limit}&offset=0&rating=g&lang=en`;
+    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=${limit}&offset=0&rating=g&lang=es`;
     return fetch(apiURL)
         .then(res => res.json())
         .then(response => {
