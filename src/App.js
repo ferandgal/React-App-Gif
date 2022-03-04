@@ -8,7 +8,7 @@ export default function App() {
   const [keyword, setKeyword] = useState('');
   const [path, pushLocation] = useLocation();
 
-console.log(path);
+  console.log(path);
 
   const handleSubmit = evt => {
     evt.preventDefault();
