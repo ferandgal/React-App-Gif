@@ -1,3 +1,7 @@
+:root{
+  --column-number: 2;
+}
+
 .App {
   text-align: center;
 }
@@ -13,3 +17,42 @@
   color: white;
 }
 
+.listGifs{
+  margin-top: 1em;
+  column-count: var(--column-number);
+  column-gap: 0.5em;
+}
+
+.gif-item{
+  display: inline-block;
+  width: 100%;
+}
+
+.input{
+  width: 25em;
+  font-size: 0.6em;
+}
+
+.input-button{
+  font-size: 0.65em;
+  padding: 0 5px  0 5px;
+  cursor: pointer;
+}
+
+@media (max-width:500px) {
+  :root{
+    --column-number: 1;
+  }
+}
+
+@media (min-width:1000px) {
+  :root{
+    --column-number: 3;
+  }
+}
+
+@media (min-width: 1500px) {
+  :root{
+    --column-number: 4;
+  }
+}

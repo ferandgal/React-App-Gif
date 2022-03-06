@@ -24,14 +24,18 @@ export default function App() {
     <div className="App">
       <section className='App-content'>
         <h1>Buscador de Gifs</h1>
-        <form onSubmit={handleSubmit}>
-          <input onChange={handleChange} placeholder="Busca un gif" type='text' value={keyword} />
-          <input type="submit" value="Buscar"/>
+        <form class='searcher-input' onSubmit={handleSubmit}>
+          <input class='input' onChange={handleChange} placeholder="Busca un gif" type='text' value={keyword} />
+          <input class='input-button' type="submit" value="Buscar"/>
         </form>
         <Link to='/gif/git/3'>Git</Link>
+        <Link to='/gif/shit/3'>Shit</Link>
+        <Link to='/gif/spain/4'>Spain</Link>
+        <div class='listGifs'>
         <Route 
           component = {ListOfGifs}
           path="/gif/:keyword/:limit" />
+        </div>
       </section>
     </div>
     );
