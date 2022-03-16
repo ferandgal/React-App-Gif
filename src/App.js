@@ -36,8 +36,8 @@ export default function App() {
           <input className='input-button' type="submit" value="Buscar"/>
         </form>
         <Link to='/gif/git/30'>Git</Link>
-        <Link to='/gif/shit/30'>Shit</Link>
-        <Link to='/gif/spain/30'>Spain</Link>
+        <Link to='/gif/F1/30'>Formula 1</Link>
+        <Link to='/gif/React/30'>React</Link>
         <div className='listGifs'>
         <Route 
           component = {ListOfGifs}
