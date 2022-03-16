@@ -13,14 +13,9 @@ export default function ListOfGifs({params}) {
 
   return <div> 
     {
-      gifs.map(({id, title, url}) => 
-      <Gif
-        key={id}
-        title={title} 
-        url={url} 
-        id={id}
-      />
-    )
-  }
+      gifs.map(({id, url}) => 
+      <Gif key={id} id={id} url={url}/>
+      )
+    }
   </div>
 }
